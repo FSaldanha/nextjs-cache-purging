@@ -1,0 +1,20 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "main": "function.js",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "next build && cross-env NODE_ENV=production firebase deploy --only functions,hosting"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "firebase-admin": "^9.4.2",
+    "firebase-functions": "^3.13.1",
+    "next": "10.0.5",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  }
+}
