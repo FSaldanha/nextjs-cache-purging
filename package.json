@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "deploy": "next build && cross-env NODE_ENV=production firebase deploy --only functions,hosting"
   },
   "dependencies": {
