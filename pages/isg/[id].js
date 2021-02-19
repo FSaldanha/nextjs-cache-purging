@@ -6,7 +6,7 @@ export default Page;
 export async function getStaticPaths() {
   return {
     paths: [],
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
@@ -19,5 +19,5 @@ export async function getStaticProps({ params }) {
     mode: "ISG (try changing end of URL)",
     data: getCurrentDate()
   }
-  return { props, revalidate: 1 };
+  return { props };
 }

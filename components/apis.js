@@ -1,3 +1,25 @@
+import fs from 'fs'
+// import path from 'path'
+
+export async function purgePage(route) {
+  try {
+    /*const BUILD_ID = fs.readFileSync(".next/BUILD_ID").toString();*/
+    // const pagesDir = path.join(process.cwd(), ".next/serverless/pages/");
+    const pagesDir = ".next/server/pages/";
+    const fullPathHTML = `${pagesDir}${route}.html`;
+    const fullPathJSON = `${pagesDir}${route}.json`;
+    fs.unlinkSync(fullPathHTML);
+    fs.unlinkSync(fullPathJSON);
+    return {
+      status: `${route} was sucessfully purged`
+    }
+  } catch (err) {
+    return {
+      status: `Could not purge ${route} - ${err}`
+    }
+  }
+}
+
 export async function getRandomAPI() {
   const res = await fetch('https://api.publicapis.org/random')
   const json = await res.json()
