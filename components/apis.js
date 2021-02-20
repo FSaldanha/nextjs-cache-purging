@@ -1,35 +1,3 @@
-// import fs from 'fs'
-import { promises } from 'fs'
-// import { join } from 'path'
-import LRUCache from 'lru-cache'
-
-export async function purgePage(route) {
-  try {
-    // const BUILD_ID = fs.readFileSync(".next/BUILD_ID").toString();*
-    // const pagesDir = join(process.cwd(), ".next/serverless/pages/");
-    /*const pagesDir = ".next/server/pages/";
-    const fullPathHTML = `${pagesDir}${route}.html`;
-    const fullPathJSON = `${pagesDir}${route}.json`;*/
-    const pathname = `.next/server/pages/${route}`
-    const fullPathHTML = `${pathname}.html`
-    const fullPathJSON = `${pathname}.json`
-    // await promises.unlink(fullPathHTML)
-    // await promises.unlink(fullPathJSON)
-    const cache = new LRUCache
-    const teste = cache.itemCount.toString()
-    // cache.del(fullPathHTML)
-    // cache.del(fullPathJSON)
-    return {
-      // status: `${route} was sucessfully purged`
-      status: teste
-    }
-  } catch (err) {
-    return {
-      status: `Could not purge ${route} - ${err}`
-    }
-  }
-}
-
 export async function getRandomAPI() {
   const res = await fetch('https://api.publicapis.org/random')
   const json = await res.json()
