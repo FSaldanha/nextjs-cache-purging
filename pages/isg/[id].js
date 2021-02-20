@@ -16,7 +16,7 @@ export async function getStaticProps({ params }) {
   const props = {
     name: json.title,
     description: json.body,
-    mode: "ISG (try changing end of URL)",
+    mode: "ISG (try changing the number at the end of URL)",
     data: getCurrentDate()
   }
   return { props };

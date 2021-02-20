@@ -9,6 +9,6 @@ export default function Page(props) {
     <p>Render time: {props.data}</p>
     <p><Link href="/"><a>Go to Home</a></Link></p>
     <p>&nbsp;</p>
-    <p><strong>HINT:</strong> append <code>?purge=1</code> to a URL of a incrementally (re)generated static page for forcing revalidation.</p>
+    <p><strong>TIP:</strong> append <code>?purge=1</code> to a URL of a incrementally (re)generated static page for forcing revalidation.</p>
   </div>
 }
