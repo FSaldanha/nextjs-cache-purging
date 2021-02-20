@@ -1,11 +1,6 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
     "rewrites": [
       {
         "source": "**",
@@ -15,6 +10,16 @@
   },
   "functions": {
     "source": ".",
+    "ignore": [
+      "firebase.json",
+      "firebase-debug.log",
+      "**/.*",
+      "**/node_modules/**",
+      "components/**",
+      "pages/**",
+      "public/**",
+      "readme.md"
+    ],
     "runtime": "nodejs10"
   }
 }

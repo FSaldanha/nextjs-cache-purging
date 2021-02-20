@@ -27,13 +27,13 @@ const purgeData = async (pathname) => {
 
 app.prepare().then(() => {
   createServer((req, res) => {
-    const url = new URL(req.url, process.env.BASEURL)
+    const url = new URL(req.url, "http://localhost:3000/")
     if (url.searchParams.get('purge') == '1') {
       purgeData(url.pathname);
     }
     handle(req, res)
   }).listen(3000, (err) => {
     if (err) throw err
-    console.log(`> Ready on ${process.env.BASEURL}`)
+    console.log(`> Ready on http://localhost:3000/`)
   })
 })
