@@ -1,3 +1,7 @@
+# Update
+
+**In February 2022, Next.js released a built-in [On-demand Incremental Static Regeneration](https://nextjs.org/blog/next-12-1#on-demand-incremental-static-regeneration-beta) in beta stage. This new solution likely makes this project obsolete.**
+
 # Next.js Cache Purging
 
 ## Introduction
